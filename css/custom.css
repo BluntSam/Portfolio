@@ -8,7 +8,7 @@
 
 /* Embedded playable game background */
 .arcade-bg {
-	background-color: #eeeeee;
+	background-color: #000000;
 }
 
 /* Back to top button */
@@ -25,8 +25,9 @@
 	object-fit: cover;
 }
 
-/* Base font for body copy */
-:root {
+:root, [data-bs-theme="dark"], [data-bs-theme="light"]
+{
+  /* Base font for body copy */
   --bs-body-font-family: "VT323", monospace;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
@@ -34,7 +35,7 @@
  
   /* Primary and secondary colours */
   --bs-primary: #0b680d;
-  --bs-primary-rgb: 98, 11, 104;
+  --bs-primary-rgb: 11, 104, 13;
   --bs-secondary: #8c8c8c;
   --bs-secondary-rgb: 140, 140, 140;
  
@@ -44,11 +45,11 @@
   --bs-body-bg: #000000;
  
  
-  /* Overriding other Bootstrap colour classes */
+  /* Overriding other Bootstrap color classes */
   --bs-dark: #000000;
   --bs-dark-rgb: 0, 0, 0;
   --bs-light: #b5ffad;
-  --bs-light-rgb: 250, 173, 255;
+  --bs-light-rgb: 181, 255, 173;
   --bs-info: #8c8c8c;
   --bs-info-rgb: 140, 140, 140;
 }
@@ -63,4 +64,16 @@ h1, h2, h3, h4, h5, h6,
   font-variation-settings:
     "BLED" 0,
     "SCAN" 0;
+}
+
+.btn-primary /* I do not want the blue. I am green. Green only. */
+{
+  --bs-btn-bg: #0b680d;
+  --bs-btn-border-color: #0b680d;
+  --bs-btn-hover-bg: #084d0a;
+  --bs-btn-hover-border-color: #084d0a;
+  --bs-btn-active-bg: #063d08;
+  --bs-btn-active-border-color: #063d08;
+  --bs-btn-disabled-bg: #0b680d;
+  --bs-btn-disabled-border-color: #0b680d;
 }
